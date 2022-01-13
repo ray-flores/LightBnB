@@ -1,7 +1,7 @@
 module.exports = function(router, database) {
 
   router.get('/properties', (req, res) => {
-    database.getAllProperties(req.query, 2) //change back to 20
+    database.getAllProperties(req.query, 20) //change back to 20
     .then(properties => res.send({properties}))
     .catch(e => {
       console.error(e);
